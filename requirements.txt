@@ -1,3 +1,4 @@
 python-telegram-bot==13.7
-urllib3==<latest_version>
-six==<latest_version>
+urllib3==1.26.15            # or the latest version
+six==1.16.0                 # or the latest version
+
