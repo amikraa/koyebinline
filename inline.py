@@ -5,6 +5,7 @@ import re
 import random
 import threading
 import time
+import os
 
 # Enable logging
 logging.basicConfig(
@@ -20,7 +21,11 @@ CHANNEL, POST, BUTTON_COUNT, ROWS_SETUP, BUTTON_LABEL, BUTTON_URL = range(6)
 user_data = {}
 greeting_message_id = None
 
-BOT_TOKEN = ''
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise ValueError("Bot token is not set")
+
 
 def start(update: Update, context: CallbackContext) -> int:
     global greeting_message_id
