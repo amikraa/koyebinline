@@ -5,7 +5,6 @@ import re
 import random
 import threading
 import time
-from config import BOT_TOKEN
 
 # Enable logging
 logging.basicConfig(
@@ -21,7 +20,7 @@ CHANNEL, POST, BUTTON_COUNT, ROWS_SETUP, BUTTON_LABEL, BUTTON_URL = range(6)
 user_data = {}
 greeting_message_id = None
 
-
+BOT_TOKEN = ''
 
 def start(update: Update, context: CallbackContext) -> int:
     global greeting_message_id
